@@ -7,5 +7,12 @@
 //
 
 import UIKit
+import ReSwift
 
+struct SetTodosAction: Action {
+    let todos: [Todo]
+}
 
+struct AddTodoAction: Action {
+    let todo: Todo
+}

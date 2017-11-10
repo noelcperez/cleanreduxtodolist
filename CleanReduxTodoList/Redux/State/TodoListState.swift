@@ -7,7 +7,8 @@
 //
 
 import UIKit
+import ReSwift
 
-struct TodoListState {
+struct TodoListState: StateType {
     var todos: [Todo]
 }

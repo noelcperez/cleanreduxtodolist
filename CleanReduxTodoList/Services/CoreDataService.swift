@@ -10,6 +10,10 @@ import UIKit
 import CoreData
 
 public class CoreDataService: TodoListServiceProtocol {
+    func add_todo(todo: Todo, completionHandlers: (Todo, String?) -> Void) {
+        
+    }
+    
     func fetch_all_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void) {
         
     }

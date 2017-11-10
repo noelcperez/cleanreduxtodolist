@@ -55,18 +55,21 @@ extension UIViewController {
         performSegue(withIdentifier: identifier, sender: sender)
     }
 }
-
+// swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 enum StoryboardScene {
     enum Main: StoryboardType {
         static let storyboardName = "Main"
         
         static let initialScene = InitialSceneType<UINavigationController>(storyboard: Main.self)
         
+        static let addTodoViewController = SceneType<CleanReduxTodoList.AddTodoViewController>(storyboard: Main.self, identifier: "AddTodoViewController")
+        
+        static let todoDetailsViewController = SceneType<CleanReduxTodoList.TodoDetailsViewController>(storyboard: Main.self, identifier: "TodoDetailsViewController")
+        
         static let todoListViewController = SceneType<CleanReduxTodoList.TodoListViewController>(storyboard: Main.self, identifier: "TodoListViewController")
     }
 }
 
-enum StoryboardSegue {
-}
+enum StoryboardSegue { }
 
 private final class BundleToken {}

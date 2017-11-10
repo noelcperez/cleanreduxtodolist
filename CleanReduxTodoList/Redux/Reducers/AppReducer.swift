@@ -7,7 +7,10 @@
 //
 
 import UIKit
+import ReSwift
 
-class AppReducer: NSObject {
-
+func appReducer(action: Action, state: TodoListState?) -> TodoListState{
+    return TodoListState(
+        todos: todo_list_reducer(state: state?.todos, action: action)
+    )
 }
