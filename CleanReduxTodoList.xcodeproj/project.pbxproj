@@ -1,0 +1,901 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		589BFD387DA0F705FC35E8BF /* Pods_CleanReduxTodoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63EB8FF59E8F86F0E51A86 /* Pods_CleanReduxTodoList.framework */; };
+		772B1C26023244ED3D107502 /* Pods_CleanReduxTodoListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8407AA1A8AFECDE9611797 /* Pods_CleanReduxTodoListTests.framework */; };
+		870FAE94E2AE8D06056E4C91 /* Pods_CleanReduxTodoListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BDB012A4EE2BB3C21220D3 /* Pods_CleanReduxTodoListUITests.framework */; };
+		C939D34C1FB5D91D00F18DE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D34B1FB5D91D00F18DE8 /* AppDelegate.swift */; };
+		C939D3541FB5D91D00F18DE8 /* CleanReduxTodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C939D3521FB5D91D00F18DE8 /* CleanReduxTodoList.xcdatamodeld */; };
+		C939D3561FB5D91D00F18DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C939D3551FB5D91D00F18DE8 /* Assets.xcassets */; };
+		C939D3591FB5D91D00F18DE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C939D3571FB5D91D00F18DE8 /* LaunchScreen.storyboard */; };
+		C939D3641FB5D91D00F18DE8 /* CleanReduxTodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D3631FB5D91D00F18DE8 /* CleanReduxTodoListTests.swift */; };
+		C939D36F1FB5D91D00F18DE8 /* CleanReduxTodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D36E1FB5D91D00F18DE8 /* CleanReduxTodoListUITests.swift */; };
+		C939D3851FB5DA8E00F18DE8 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D3801FB5DA8E00F18DE8 /* TodoListViewController.swift */; };
+		C939D3871FB5DB2400F18DE8 /* TodoListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D3861FB5DB2400F18DE8 /* TodoListWorker.swift */; };
+		C939D3891FB5DB8800F18DE8 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D3881FB5DB8800F18DE8 /* CoreDataService.swift */; };
+		C939D38B1FB5DC0800F18DE8 /* TodoListListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D38A1FB5DC0800F18DE8 /* TodoListListener.swift */; };
+		C939D38D1FB5DCF400F18DE8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D38C1FB5DCF400F18DE8 /* Todo.swift */; };
+		C939D38F1FB5DE9C00F18DE8 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D38E1FB5DE9C00F18DE8 /* FirebaseService.swift */; };
+		C939D3951FB5DF0600F18DE8 /* TodoListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D3941FB5DF0600F18DE8 /* TodoListState.swift */; };
+		C939D3971FB5DF4800F18DE8 /* TodoListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D3961FB5DF4800F18DE8 /* TodoListActions.swift */; };
+		C939D3991FB5DF6900F18DE8 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D3981FB5DF6900F18DE8 /* AppReducer.swift */; };
+		C939D39B1FB5DF7E00F18DE8 /* TodoListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D39A1FB5DF7E00F18DE8 /* TodoListReducer.swift */; };
+		C939D39E1FB5E54700F18DE8 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939D39D1FB5E54700F18DE8 /* Storyboard.swift */; };
+		C939D3A01FB5E59C00F18DE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C939D39F1FB5E59C00F18DE8 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C939D3601FB5D91D00F18DE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C939D3401FB5D91D00F18DE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C939D3471FB5D91D00F18DE8;
+			remoteInfo = CleanReduxTodoList;
+		};
+		C939D36B1FB5D91D00F18DE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C939D3401FB5D91D00F18DE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C939D3471FB5D91D00F18DE8;
+			remoteInfo = CleanReduxTodoList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A612798FADD9256753810E4 /* Pods-CleanReduxTodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanReduxTodoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanReduxTodoList/Pods-CleanReduxTodoList.release.xcconfig"; sourceTree = "<group>"; };
+		3F6219C16E7A2C659511DC83 /* Pods-CleanReduxTodoListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanReduxTodoListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanReduxTodoListTests/Pods-CleanReduxTodoListTests.release.xcconfig"; sourceTree = "<group>"; };
+		406D211CCB827A0E4B484DE7 /* Pods-CleanReduxTodoListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanReduxTodoListTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanReduxTodoListTests/Pods-CleanReduxTodoListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		617EE9B534C8FB0ABC4EAEE2 /* Pods-CleanReduxTodoListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanReduxTodoListUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanReduxTodoListUITests/Pods-CleanReduxTodoListUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C8407AA1A8AFECDE9611797 /* Pods_CleanReduxTodoListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanReduxTodoListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95BDB012A4EE2BB3C21220D3 /* Pods_CleanReduxTodoListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanReduxTodoListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CDBC931C99880B0CB358158 /* Pods-CleanReduxTodoListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanReduxTodoListUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanReduxTodoListUITests/Pods-CleanReduxTodoListUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C939D3481FB5D91D00F18DE8 /* CleanReduxTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanReduxTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C939D34B1FB5D91D00F18DE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C939D3531FB5D91D00F18DE8 /* CleanReduxTodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CleanReduxTodoList.xcdatamodel; sourceTree = "<group>"; };
+		C939D3551FB5D91D00F18DE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C939D3581FB5D91D00F18DE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C939D35A1FB5D91D00F18DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C939D35F1FB5D91D00F18DE8 /* CleanReduxTodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanReduxTodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C939D3631FB5D91D00F18DE8 /* CleanReduxTodoListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanReduxTodoListTests.swift; sourceTree = "<group>"; };
+		C939D3651FB5D91D00F18DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C939D36A1FB5D91D00F18DE8 /* CleanReduxTodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanReduxTodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C939D36E1FB5D91D00F18DE8 /* CleanReduxTodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanReduxTodoListUITests.swift; sourceTree = "<group>"; };
+		C939D3701FB5D91D00F18DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C939D3801FB5DA8E00F18DE8 /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		C939D3861FB5DB2400F18DE8 /* TodoListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListWorker.swift; sourceTree = "<group>"; };
+		C939D3881FB5DB8800F18DE8 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		C939D38A1FB5DC0800F18DE8 /* TodoListListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListListener.swift; sourceTree = "<group>"; };
+		C939D38C1FB5DCF400F18DE8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		C939D38E1FB5DE9C00F18DE8 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		C939D3941FB5DF0600F18DE8 /* TodoListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListState.swift; sourceTree = "<group>"; };
+		C939D3961FB5DF4800F18DE8 /* TodoListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListActions.swift; sourceTree = "<group>"; };
+		C939D3981FB5DF6900F18DE8 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		C939D39A1FB5DF7E00F18DE8 /* TodoListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListReducer.swift; sourceTree = "<group>"; };
+		C939D39D1FB5E54700F18DE8 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		C939D39F1FB5E59C00F18DE8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CD63EB8FF59E8F86F0E51A86 /* Pods_CleanReduxTodoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanReduxTodoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF62DD8ED82B05737364E927 /* Pods-CleanReduxTodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanReduxTodoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanReduxTodoList/Pods-CleanReduxTodoList.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C939D3451FB5D91D00F18DE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589BFD387DA0F705FC35E8BF /* Pods_CleanReduxTodoList.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C939D35C1FB5D91D00F18DE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772B1C26023244ED3D107502 /* Pods_CleanReduxTodoListTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C939D3671FB5D91D00F18DE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				870FAE94E2AE8D06056E4C91 /* Pods_CleanReduxTodoListUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		685728E9A928C9A4B6B887DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD63EB8FF59E8F86F0E51A86 /* Pods_CleanReduxTodoList.framework */,
+				6C8407AA1A8AFECDE9611797 /* Pods_CleanReduxTodoListTests.framework */,
+				95BDB012A4EE2BB3C21220D3 /* Pods_CleanReduxTodoListUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		908F1E756C7A27CB69539484 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF62DD8ED82B05737364E927 /* Pods-CleanReduxTodoList.debug.xcconfig */,
+				1A612798FADD9256753810E4 /* Pods-CleanReduxTodoList.release.xcconfig */,
+				406D211CCB827A0E4B484DE7 /* Pods-CleanReduxTodoListTests.debug.xcconfig */,
+				3F6219C16E7A2C659511DC83 /* Pods-CleanReduxTodoListTests.release.xcconfig */,
+				617EE9B534C8FB0ABC4EAEE2 /* Pods-CleanReduxTodoListUITests.debug.xcconfig */,
+				9CDBC931C99880B0CB358158 /* Pods-CleanReduxTodoListUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C939D33F1FB5D91D00F18DE8 = {
+			isa = PBXGroup;
+			children = (
+				C939D34A1FB5D91D00F18DE8 /* CleanReduxTodoList */,
+				C939D3621FB5D91D00F18DE8 /* CleanReduxTodoListTests */,
+				C939D36D1FB5D91D00F18DE8 /* CleanReduxTodoListUITests */,
+				C939D3491FB5D91D00F18DE8 /* Products */,
+				908F1E756C7A27CB69539484 /* Pods */,
+				685728E9A928C9A4B6B887DA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C939D3491FB5D91D00F18DE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C939D3481FB5D91D00F18DE8 /* CleanReduxTodoList.app */,
+				C939D35F1FB5D91D00F18DE8 /* CleanReduxTodoListTests.xctest */,
+				C939D36A1FB5D91D00F18DE8 /* CleanReduxTodoListUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C939D34A1FB5D91D00F18DE8 /* CleanReduxTodoList */ = {
+			isa = PBXGroup;
+			children = (
+				C939D3841FB5DA8E00F18DE8 /* Models */,
+				C939D3901FB5DEE600F18DE8 /* Redux */,
+				C939D3821FB5DA8E00F18DE8 /* Services */,
+				C939D3831FB5DA8E00F18DE8 /* Workers */,
+				C939D37E1FB5DA8E00F18DE8 /* ViewControllers */,
+				C939D39C1FB5E24700F18DE8 /* Storyboards */,
+				C939D34B1FB5D91D00F18DE8 /* AppDelegate.swift */,
+				C939D3551FB5D91D00F18DE8 /* Assets.xcassets */,
+				C939D3571FB5D91D00F18DE8 /* LaunchScreen.storyboard */,
+				C939D35A1FB5D91D00F18DE8 /* Info.plist */,
+				C939D3521FB5D91D00F18DE8 /* CleanReduxTodoList.xcdatamodeld */,
+			);
+			path = CleanReduxTodoList;
+			sourceTree = "<group>";
+		};
+		C939D3621FB5D91D00F18DE8 /* CleanReduxTodoListTests */ = {
+			isa = PBXGroup;
+			children = (
+				C939D3631FB5D91D00F18DE8 /* CleanReduxTodoListTests.swift */,
+				C939D3651FB5D91D00F18DE8 /* Info.plist */,
+			);
+			path = CleanReduxTodoListTests;
+			sourceTree = "<group>";
+		};
+		C939D36D1FB5D91D00F18DE8 /* CleanReduxTodoListUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C939D36E1FB5D91D00F18DE8 /* CleanReduxTodoListUITests.swift */,
+				C939D3701FB5D91D00F18DE8 /* Info.plist */,
+			);
+			path = CleanReduxTodoListUITests;
+			sourceTree = "<group>";
+		};
+		C939D37E1FB5DA8E00F18DE8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C939D37F1FB5DA8E00F18DE8 /* TodoList */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C939D37F1FB5DA8E00F18DE8 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				C939D3801FB5DA8E00F18DE8 /* TodoListViewController.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		C939D3821FB5DA8E00F18DE8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C939D3881FB5DB8800F18DE8 /* CoreDataService.swift */,
+				C939D38E1FB5DE9C00F18DE8 /* FirebaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C939D3831FB5DA8E00F18DE8 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				C939D3861FB5DB2400F18DE8 /* TodoListWorker.swift */,
+				C939D38A1FB5DC0800F18DE8 /* TodoListListener.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		C939D3841FB5DA8E00F18DE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C939D38C1FB5DCF400F18DE8 /* Todo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C939D3901FB5DEE600F18DE8 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				C939D3911FB5DEE600F18DE8 /* State */,
+				C939D3921FB5DEE600F18DE8 /* Actions */,
+				C939D3931FB5DEE600F18DE8 /* Reducers */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		C939D3911FB5DEE600F18DE8 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				C939D3941FB5DF0600F18DE8 /* TodoListState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		C939D3921FB5DEE600F18DE8 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				C939D3961FB5DF4800F18DE8 /* TodoListActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		C939D3931FB5DEE600F18DE8 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				C939D3981FB5DF6900F18DE8 /* AppReducer.swift */,
+				C939D39A1FB5DF7E00F18DE8 /* TodoListReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		C939D39C1FB5E24700F18DE8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C939D39F1FB5E59C00F18DE8 /* Main.storyboard */,
+				C939D39D1FB5E54700F18DE8 /* Storyboard.swift */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C939D3471FB5D91D00F18DE8 /* CleanReduxTodoList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C939D3731FB5D91D00F18DE8 /* Build configuration list for PBXNativeTarget "CleanReduxTodoList" */;
+			buildPhases = (
+				E6E3067E8C11203EF37BDD9C /* [CP] Check Pods Manifest.lock */,
+				C939D3441FB5D91D00F18DE8 /* Sources */,
+				C939D3451FB5D91D00F18DE8 /* Frameworks */,
+				C939D3461FB5D91D00F18DE8 /* Resources */,
+				4DEAE7009304EED8481D7252 /* [CP] Embed Pods Frameworks */,
+				0666AA45F2E7802756912307 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CleanReduxTodoList;
+			productName = CleanReduxTodoList;
+			productReference = C939D3481FB5D91D00F18DE8 /* CleanReduxTodoList.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C939D35E1FB5D91D00F18DE8 /* CleanReduxTodoListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C939D3761FB5D91D00F18DE8 /* Build configuration list for PBXNativeTarget "CleanReduxTodoListTests" */;
+			buildPhases = (
+				7CBEA11062D016F47068A138 /* [CP] Check Pods Manifest.lock */,
+				C939D35B1FB5D91D00F18DE8 /* Sources */,
+				C939D35C1FB5D91D00F18DE8 /* Frameworks */,
+				C939D35D1FB5D91D00F18DE8 /* Resources */,
+				88EAEBEF79F797F42E42BA27 /* [CP] Embed Pods Frameworks */,
+				6C2FA7EB170E4D6C3D6577F5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C939D3611FB5D91D00F18DE8 /* PBXTargetDependency */,
+			);
+			name = CleanReduxTodoListTests;
+			productName = CleanReduxTodoListTests;
+			productReference = C939D35F1FB5D91D00F18DE8 /* CleanReduxTodoListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C939D3691FB5D91D00F18DE8 /* CleanReduxTodoListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C939D3791FB5D91D00F18DE8 /* Build configuration list for PBXNativeTarget "CleanReduxTodoListUITests" */;
+			buildPhases = (
+				CBC78072FE5FA234B6754977 /* [CP] Check Pods Manifest.lock */,
+				C939D3661FB5D91D00F18DE8 /* Sources */,
+				C939D3671FB5D91D00F18DE8 /* Frameworks */,
+				C939D3681FB5D91D00F18DE8 /* Resources */,
+				2FDE0C9938E90515C54AB424 /* [CP] Embed Pods Frameworks */,
+				F596FF0FD2B11BF9CB25E933 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C939D36C1FB5D91D00F18DE8 /* PBXTargetDependency */,
+			);
+			name = CleanReduxTodoListUITests;
+			productName = CleanReduxTodoListUITests;
+			productReference = C939D36A1FB5D91D00F18DE8 /* CleanReduxTodoListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C939D3401FB5D91D00F18DE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Noel C Perez";
+				TargetAttributes = {
+					C939D3471FB5D91D00F18DE8 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					C939D35E1FB5D91D00F18DE8 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C939D3471FB5D91D00F18DE8;
+					};
+					C939D3691FB5D91D00F18DE8 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C939D3471FB5D91D00F18DE8;
+					};
+				};
+			};
+			buildConfigurationList = C939D3431FB5D91D00F18DE8 /* Build configuration list for PBXProject "CleanReduxTodoList" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C939D33F1FB5D91D00F18DE8;
+			productRefGroup = C939D3491FB5D91D00F18DE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C939D3471FB5D91D00F18DE8 /* CleanReduxTodoList */,
+				C939D35E1FB5D91D00F18DE8 /* CleanReduxTodoListTests */,
+				C939D3691FB5D91D00F18DE8 /* CleanReduxTodoListUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C939D3461FB5D91D00F18DE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C939D3A01FB5E59C00F18DE8 /* Main.storyboard in Resources */,
+				C939D3591FB5D91D00F18DE8 /* LaunchScreen.storyboard in Resources */,
+				C939D3561FB5D91D00F18DE8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C939D35D1FB5D91D00F18DE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C939D3681FB5D91D00F18DE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0666AA45F2E7802756912307 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanReduxTodoList/Pods-CleanReduxTodoList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FDE0C9938E90515C54AB424 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanReduxTodoListUITests/Pods-CleanReduxTodoListUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DEAE7009304EED8481D7252 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CleanReduxTodoList/Pods-CleanReduxTodoList-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanReduxTodoList/Pods-CleanReduxTodoList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C2FA7EB170E4D6C3D6577F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanReduxTodoListTests/Pods-CleanReduxTodoListTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CBEA11062D016F47068A138 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleanReduxTodoListTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88EAEBEF79F797F42E42BA27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanReduxTodoListTests/Pods-CleanReduxTodoListTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBC78072FE5FA234B6754977 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleanReduxTodoListUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6E3067E8C11203EF37BDD9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleanReduxTodoList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F596FF0FD2B11BF9CB25E933 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanReduxTodoListUITests/Pods-CleanReduxTodoListUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C939D3441FB5D91D00F18DE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C939D38D1FB5DCF400F18DE8 /* Todo.swift in Sources */,
+				C939D3991FB5DF6900F18DE8 /* AppReducer.swift in Sources */,
+				C939D3971FB5DF4800F18DE8 /* TodoListActions.swift in Sources */,
+				C939D3851FB5DA8E00F18DE8 /* TodoListViewController.swift in Sources */,
+				C939D39E1FB5E54700F18DE8 /* Storyboard.swift in Sources */,
+				C939D38F1FB5DE9C00F18DE8 /* FirebaseService.swift in Sources */,
+				C939D34C1FB5D91D00F18DE8 /* AppDelegate.swift in Sources */,
+				C939D3891FB5DB8800F18DE8 /* CoreDataService.swift in Sources */,
+				C939D3951FB5DF0600F18DE8 /* TodoListState.swift in Sources */,
+				C939D39B1FB5DF7E00F18DE8 /* TodoListReducer.swift in Sources */,
+				C939D38B1FB5DC0800F18DE8 /* TodoListListener.swift in Sources */,
+				C939D3541FB5D91D00F18DE8 /* CleanReduxTodoList.xcdatamodeld in Sources */,
+				C939D3871FB5DB2400F18DE8 /* TodoListWorker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C939D35B1FB5D91D00F18DE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C939D3641FB5D91D00F18DE8 /* CleanReduxTodoListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C939D3661FB5D91D00F18DE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C939D36F1FB5D91D00F18DE8 /* CleanReduxTodoListUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C939D3611FB5D91D00F18DE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C939D3471FB5D91D00F18DE8 /* CleanReduxTodoList */;
+			targetProxy = C939D3601FB5D91D00F18DE8 /* PBXContainerItemProxy */;
+		};
+		C939D36C1FB5D91D00F18DE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C939D3471FB5D91D00F18DE8 /* CleanReduxTodoList */;
+			targetProxy = C939D36B1FB5D91D00F18DE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C939D3571FB5D91D00F18DE8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C939D3581FB5D91D00F18DE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C939D3711FB5D91D00F18DE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C939D3721FB5D91D00F18DE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C939D3741FB5D91D00F18DE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF62DD8ED82B05737364E927 /* Pods-CleanReduxTodoList.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CleanReduxTodoList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-00K-Corp.CleanReduxTodoList";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C939D3751FB5D91D00F18DE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A612798FADD9256753810E4 /* Pods-CleanReduxTodoList.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CleanReduxTodoList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-00K-Corp.CleanReduxTodoList";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C939D3771FB5D91D00F18DE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 406D211CCB827A0E4B484DE7 /* Pods-CleanReduxTodoListTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CleanReduxTodoListTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-00K-Corp.CleanReduxTodoListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanReduxTodoList.app/CleanReduxTodoList";
+			};
+			name = Debug;
+		};
+		C939D3781FB5D91D00F18DE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F6219C16E7A2C659511DC83 /* Pods-CleanReduxTodoListTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CleanReduxTodoListTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-00K-Corp.CleanReduxTodoListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanReduxTodoList.app/CleanReduxTodoList";
+			};
+			name = Release;
+		};
+		C939D37A1FB5D91D00F18DE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 617EE9B534C8FB0ABC4EAEE2 /* Pods-CleanReduxTodoListUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CleanReduxTodoListUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-00K-Corp.CleanReduxTodoListUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CleanReduxTodoList;
+			};
+			name = Debug;
+		};
+		C939D37B1FB5D91D00F18DE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CDBC931C99880B0CB358158 /* Pods-CleanReduxTodoListUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CleanReduxTodoListUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-00K-Corp.CleanReduxTodoListUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CleanReduxTodoList;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C939D3431FB5D91D00F18DE8 /* Build configuration list for PBXProject "CleanReduxTodoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C939D3711FB5D91D00F18DE8 /* Debug */,
+				C939D3721FB5D91D00F18DE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C939D3731FB5D91D00F18DE8 /* Build configuration list for PBXNativeTarget "CleanReduxTodoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C939D3741FB5D91D00F18DE8 /* Debug */,
+				C939D3751FB5D91D00F18DE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C939D3761FB5D91D00F18DE8 /* Build configuration list for PBXNativeTarget "CleanReduxTodoListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C939D3771FB5D91D00F18DE8 /* Debug */,
+				C939D3781FB5D91D00F18DE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C939D3791FB5D91D00F18DE8 /* Build configuration list for PBXNativeTarget "CleanReduxTodoListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C939D37A1FB5D91D00F18DE8 /* Debug */,
+				C939D37B1FB5D91D00F18DE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C939D3521FB5D91D00F18DE8 /* CleanReduxTodoList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C939D3531FB5D91D00F18DE8 /* CleanReduxTodoList.xcdatamodel */,
+			);
+			currentVersion = C939D3531FB5D91D00F18DE8 /* CleanReduxTodoList.xcdatamodel */;
+			path = CleanReduxTodoList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C939D3401FB5D91D00F18DE8 /* Project object */;
+}
