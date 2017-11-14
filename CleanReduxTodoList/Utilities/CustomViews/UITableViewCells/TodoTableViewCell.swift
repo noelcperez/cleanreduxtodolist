@@ -9,10 +9,15 @@
 import UIKit
 import Reusable
 
-class TodoTableViewCell: UITableViewCell, Reusable {
+class TodoTableViewCell: UITableViewCell, NibReusable {
 
+    @IBOutlet var todoTitle: UILabel!
+    @IBOutlet var doneStatusView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.doneStatusView.layer.cornerRadius = self.doneStatusView.bounds.height/2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,9 +25,8 @@ class TodoTableViewCell: UITableViewCell, Reusable {
     }
     
     func configure(view_model: ListTodos.FetchTodos.TodosViewModel.DisplayedTodo){
-        
-        self.textLabel?.text = view_model.title
-        
+        self.todoTitle.text = view_model.title
+        self.doneStatusView.backgroundColor = view_model.is_done ? UIColor.green : UIColor.red
     }
 
 }

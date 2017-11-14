@@ -18,7 +18,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     
     var interactor: ListTodosBusinessLogic?
     var router: (NSObjectProtocol & TodoListRoutingLogic & TodoListDataPassing)?
-    var displayed_todos: [ListTodos.FetchTodos.TodosViewModel.DisplayedTodo] = []
+    fileprivate var displayed_todos: [ListTodos.FetchTodos.TodosViewModel.DisplayedTodo] = []
     
     // MARK: Object lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
@@ -54,6 +54,8 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(TodoListViewController.add_todo))
         
         self.tableView.register(cellType: TodoTableViewCell.self)
+        self.tableView.tableFooterView = UIView()
+        self.tableView.estimatedRowHeight = 40
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,10 +76,10 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     
     //MARK: - My Functions
     @objc fileprivate func add_todo(){
-        self.router?.routeAddTodo()
+        self.router?.routeToAddTodo()
     }
     
-    //MARK: - Fetch todos
+    //MARK: - TodoListDisplayLogic protocol
     func display_fetched_todolist(view_model: ListTodos.FetchTodos.TodosViewModel) {
         self.displayed_todos = view_model.displayed_todos
         
@@ -87,6 +89,10 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int{
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -99,6 +105,11 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.configure(view_model: displayed_todos[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.router?.data_store?.selected_index = indexPath.row
+        self.router?.routeToShowTodoDetails()
     }
 }
 

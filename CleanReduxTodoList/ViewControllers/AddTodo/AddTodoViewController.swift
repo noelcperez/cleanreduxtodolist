@@ -49,7 +49,11 @@ class AddTodoViewController: UIViewController, AddTodoDisplayProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Todo"
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(AddTodoViewController.add_todo))
+        
+        self.titleTextField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +62,7 @@ class AddTodoViewController: UIViewController, AddTodoDisplayProtocol {
     
     //MARK: - My Functions
     @objc fileprivate func add_todo(){
-        self.interactor?.add_todo(todo: CreateTodo.Create.Request(todo_from_fields: CreateTodo.TodoFromFields(title: self.titleTextField.text!)))
+        self.interactor?.add_todo(todo: CreateTodo.Create.Request(todo_from_fields: CreateTodo.TodoFromFields(title: self.titleTextField.text!, done: .todo)))
     }
 
     //MARK: - Display protocol

@@ -16,3 +16,7 @@ struct SetTodosAction: Action {
 struct AddTodoAction: Action {
     let todo: Todo
 }
+
+struct UpdateTodo: Action {
+    let todo: Todo
+}

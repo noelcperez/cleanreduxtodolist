@@ -10,14 +10,31 @@ import UIKit
 
 struct Todo: Codable {
     enum DoneStatus: Int, Codable {
-        case notdone = 0
+        case todo = 0
         case done = 1
-        case forLater = 2
     }
     
-    var key: String
+    var key: String!
     var title: String
     var done: DoneStatus
     var create_date: Date
     var done_date: Date
+    
+    fileprivate enum CodingKeys: String, CodingKey{
+        case title
+        case done
+        case create_date
+        case done_date
+        
+    }
+}
+extension Todo {
+    init(from decoder: Decoder) throws {
+        let todo = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.title = try todo.decode(String.self, forKey: .title)
+        self.done = try todo.decode(DoneStatus.self, forKey: .done)
+        self.create_date = try todo.decode(Date.self, forKey: .create_date)
+        self.done_date = try todo.decode(Date.self, forKey: .done_date)
+    }
 }

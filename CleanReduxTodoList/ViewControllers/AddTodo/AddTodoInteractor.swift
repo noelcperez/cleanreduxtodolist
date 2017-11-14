@@ -30,17 +30,17 @@ class AddTodoInteractor: AddTodoBusinessProtocol, AddTodoDataSource {
             if let _ = error{
                 //Show error
             }
-            else{
-                self.todo = todo
+            else if let the_todo = todo{
+                self.todo = the_todo
                 //If I wasn't using Firebase I must call the Redux AddTodo Action like this
                 //GlobalStore.store.dispatch(AddTodoAction(todo: todo))
                 //Call the todo added
-                self.view_model?.todo_created(response: CreateTodo.Create.Response(todo: todo))
+                self.view_model?.todo_created(response: CreateTodo.Create.Response(todo: the_todo))
             }
         }
     }
     
     fileprivate func build_todo_from_fields(todo: CreateTodo.TodoFromFields) -> Todo{
-        return Todo(key: "", title: todo.title, done: .notdone, create_date: Date(), done_date: Date())
+        return Todo(key: "", title: todo.title, done: todo.done, create_date: Date(), done_date: Date())
     }
 }

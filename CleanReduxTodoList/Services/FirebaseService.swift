@@ -9,29 +9,74 @@
 import UIKit
 import Firebase
 
-public class FirebaseService: TodoListServiceProtocol, TodoListListenerProtocol {
+public class FirebaseService: TodoListServiceProtocol, TodoListListenerProtocol, TodoListenerProtocol {
     
-    fileprivate let kTodosTable = "todos"
+    fileprivate lazy var todosDatabaseReference = Database.database().reference().child("todos")
     
-    func add_todo(todo: Todo, completionHandlers: (Todo, String?) -> Void) {
-        let encoder = JSONEncoder()
-        let data = try! encoder.encode(todo)
-        Database.database().reference().child(kTodosTable).childByAutoId().setValue(data)
-        completionHandlers(todo, nil)
+    //MARK: TodoListServiceProtocol implementation
+    func add_todo(todo: Todo, completionHandlers: (Todo?, String?) -> Void) {
+        do {
+            let dict = try self.encode(todo: todo)
+            self.todosDatabaseReference.childByAutoId().setValue(dict)
+            completionHandlers(todo, nil)
+        }
+        catch let error {
+            completionHandlers(nil, error.localizedDescription)
+        }
     }
     
-    func fetch_all_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void) {
+    func update_todo(todo: Todo, completionHandlers: (String?) -> ()) {
+        do {
+            let dict = try self.encode(todo: todo)
+            self.todosDatabaseReference.child(todo.key).setValue(dict)
+            completionHandlers(nil)
+        }
+        catch let error {
+            completionHandlers(error.localizedDescription)
+        }
+    }
+    
+    func remove_todo(todo: Todo, completionHandler: () -> ()) {
         
     }
     
+    func fetch_all_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void) {
+        self.todosDatabaseReference.observeSingleEvent(of: .value, with: { (dataSnapshot) in
+            completionHandler(self.process_todos(dataSnapshot: dataSnapshot), nil)
+        })
+    }
+    
+    //MARK: TodoListListenerProtocol implementation
     func listen_to_todos(completionHandler: @escaping ([Todo]) -> Void) {
-        Database.database().reference().child(kTodosTable).observeSingleEvent(of: .value, with: { (dataSnapshot) in
+        self.todosDatabaseReference.observe(.value, with: { (dataSnapshot) in
             completionHandler(self.process_todos(dataSnapshot: dataSnapshot))
         })
     }
     
     func stop_listening_todos() {
-        
+        self.todosDatabaseReference.removeAllObservers()
+    }
+    
+    
+    //MARK: TodoListenerProtocol implementation
+    func listen_to_todo(todo: Todo, completionHandler: @escaping (Todo) -> Void) {
+        self.todosDatabaseReference.child(todo.key).observe(.value, with: { (dataSnapshot) in
+            if dataSnapshot.hasChildren(), let todo_dict = dataSnapshot.value as? NSDictionary{
+                completionHandler(self.decode(todo_dictionary: todo_dict, todo_key: dataSnapshot.key))
+            }
+        })
+    }
+    
+    func stop_listening_todo() {
+        self.stop_listening_todos()
+    }
+    
+    //MARK: Utility functions
+    fileprivate func encode(todo: Todo) throws -> Any{
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        let data = try encoder.encode(todo)
+        return try JSONSerialization.jsonObject(with: data, options: [])
     }
     
     fileprivate func process_todos(dataSnapshot: DataSnapshot) -> [Todo]{
@@ -40,20 +85,27 @@ public class FirebaseService: TodoListServiceProtocol, TodoListListenerProtocol 
         if dataSnapshot.hasChildren(), let todos_dict = dataSnapshot.value as? NSDictionary, let todos_keys = todos_dict.allKeys as? [String]{
             for todo_key in todos_keys{
                 if let todo_dictionary = todos_dict[todo_key] as? NSMutableDictionary{
-                    todo_dictionary.setValue(todo_key, forKey: "key")
-                    let decoder = JSONDecoder()
-                    decoder.dateDecodingStrategy = .iso8601
-                    do{
-                        let data = try JSONSerialization.data(withJSONObject: todo_dictionary, options: [])
-                        let todo = try decoder.decode(Todo.self, from: data)
-                        todos.append(todo)
-                    }
-                    catch{ }
+                    todos.append(self.decode(todo_dictionary: todo_dictionary, todo_key: todo_key))
                 }
             }
         }
         
         return todos
+    }
+    
+    fileprivate func decode(todo_dictionary: NSDictionary, todo_key: String) -> Todo{
+        var todo_to_return: Todo!
+        
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        do{
+            let data = try JSONSerialization.data(withJSONObject: todo_dictionary, options: [])
+            todo_to_return = try decoder.decode(Todo.self, from: data)
+            todo_to_return.key = todo_key
+        }
+        catch{ }
+        
+        return todo_to_return
     }
     
 }

@@ -11,6 +11,7 @@ import UIKit
 enum CreateTodo{
     struct TodoFromFields {
         var title: String
+        var done: Todo.DoneStatus
     }
     enum Create {
         struct Request {
@@ -18,6 +19,18 @@ enum CreateTodo{
         }
         struct Response {
             var todo: Todo
+        }
+        struct ViewModel {
+            
+        }
+    }
+    
+    enum Update {
+        struct Request {
+            var todo_from_fields: TodoFromFields
+        }
+        struct Response {
+            
         }
         struct ViewModel {
             
