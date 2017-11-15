@@ -33,6 +33,9 @@
 		DC01018B1FB65A83009EC72F /* AddTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC01018A1FB65A83009EC72F /* AddTodoViewModel.swift */; };
 		DC01018D1FB65A8F009EC72F /* AddTodoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC01018C1FB65A8F009EC72F /* AddTodoModels.swift */; };
 		DC01018F1FB65A9E009EC72F /* AddTodoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC01018E1FB65A9E009EC72F /* AddTodoRouter.swift */; };
+		DC119BCB1FBCEAB400A90C3D /* TodoListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC119BCA1FBCEAB400A90C3D /* TodoListInteractorTests.swift */; };
+		DC119BCD1FBCF29100A90C3D /* TodoListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC119BCC1FBCF29100A90C3D /* TodoListPresenterTests.swift */; };
+		DC119BCF1FBCF99600A90C3D /* TodoListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC119BCE1FBCF99600A90C3D /* TodoListViewControllerTests.swift */; };
 		DC9A57E11FB5FA74004CCDF4 /* TodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A57E01FB5FA74004CCDF4 /* TodoListInteractor.swift */; };
 		DC9A57E31FB5FA8D004CCDF4 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A57E21FB5FA8D004CCDF4 /* TodoListViewModel.swift */; };
 		DC9A57E51FB5FAA5004CCDF4 /* TodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A57E41FB5FAA5004CCDF4 /* TodoListRouter.swift */; };
@@ -47,6 +50,9 @@
 		DCC0BCA31FBB566300E125F9 /* TodoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCA21FBB566300E125F9 /* TodoDetailsViewModel.swift */; };
 		DCC0BCA51FBB566C00E125F9 /* TodoDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCA41FBB566C00E125F9 /* TodoDetailsRouter.swift */; };
 		DCC0BCA71FBB567600E125F9 /* TodoDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCA61FBB567600E125F9 /* TodoDetailsModels.swift */; };
+		DCC0BCAB1FBCA59300E125F9 /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCAA1FBCA59300E125F9 /* Seeds.swift */; };
+		DCC0BCAD1FBCAFD800E125F9 /* FirebaseServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCAC1FBCAFD800E125F9 /* FirebaseServiceTest.swift */; };
+		DCC0BCB01FBCDD0600E125F9 /* TodoWorkerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCAF1FBCDD0600E125F9 /* TodoWorkerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +110,9 @@
 		DC01018A1FB65A83009EC72F /* AddTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewModel.swift; sourceTree = "<group>"; };
 		DC01018C1FB65A8F009EC72F /* AddTodoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoModels.swift; sourceTree = "<group>"; };
 		DC01018E1FB65A9E009EC72F /* AddTodoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoRouter.swift; sourceTree = "<group>"; };
+		DC119BCA1FBCEAB400A90C3D /* TodoListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractorTests.swift; sourceTree = "<group>"; };
+		DC119BCC1FBCF29100A90C3D /* TodoListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenterTests.swift; sourceTree = "<group>"; };
+		DC119BCE1FBCF99600A90C3D /* TodoListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewControllerTests.swift; sourceTree = "<group>"; };
 		DC9A57E01FB5FA74004CCDF4 /* TodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractor.swift; sourceTree = "<group>"; };
 		DC9A57E21FB5FA8D004CCDF4 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		DC9A57E41FB5FAA5004CCDF4 /* TodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRouter.swift; sourceTree = "<group>"; };
@@ -118,6 +127,9 @@
 		DCC0BCA21FBB566300E125F9 /* TodoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsViewModel.swift; sourceTree = "<group>"; };
 		DCC0BCA41FBB566C00E125F9 /* TodoDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsRouter.swift; sourceTree = "<group>"; };
 		DCC0BCA61FBB567600E125F9 /* TodoDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsModels.swift; sourceTree = "<group>"; };
+		DCC0BCAA1FBCA59300E125F9 /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
+		DCC0BCAC1FBCAFD800E125F9 /* FirebaseServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceTest.swift; sourceTree = "<group>"; };
+		DCC0BCAF1FBCDD0600E125F9 /* TodoWorkerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWorkerTest.swift; sourceTree = "<group>"; };
 		FF62DD8ED82B05737364E927 /* Pods-CleanReduxTodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanReduxTodoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanReduxTodoList/Pods-CleanReduxTodoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,8 +230,12 @@
 		C939D3621FB5D91D00F18DE8 /* CleanReduxTodoListTests */ = {
 			isa = PBXGroup;
 			children = (
+				DCC0BCA91FBCA52D00E125F9 /* Services */,
+				DCC0BCAE1FBCDCE400E125F9 /* Workers */,
+				DC119BC81FBCEA0D00A90C3D /* ViewControllers */,
 				C939D3631FB5D91D00F18DE8 /* CleanReduxTodoListTests.swift */,
 				C939D3651FB5D91D00F18DE8 /* Info.plist */,
+				DCC0BCAA1FBCA59300E125F9 /* Seeds.swift */,
 			);
 			path = CleanReduxTodoListTests;
 			sourceTree = "<group>";
@@ -325,6 +341,24 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		DC119BC81FBCEA0D00A90C3D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC119BC91FBCEA5600A90C3D /* TodoList */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DC119BC91FBCEA5600A90C3D /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				DC119BCA1FBCEAB400A90C3D /* TodoListInteractorTests.swift */,
+				DC119BCC1FBCF29100A90C3D /* TodoListPresenterTests.swift */,
+				DC119BCE1FBCF99600A90C3D /* TodoListViewControllerTests.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
 		DC9A57EE1FB615FF004CCDF4 /* TodoDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +423,22 @@
 				DCC0BC9E1FBB4FDD00E125F9 /* TodoTableViewCell.xib */,
 			);
 			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
+		DCC0BCA91FBCA52D00E125F9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DCC0BCAC1FBCAFD800E125F9 /* FirebaseServiceTest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DCC0BCAE1FBCDCE400E125F9 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				DCC0BCAF1FBCDD0600E125F9 /* TodoWorkerTest.swift */,
+			);
+			path = Workers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -631,9 +681,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CleanReduxTodoListTests/Pods-CleanReduxTodoListTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -735,7 +796,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC119BCB1FBCEAB400A90C3D /* TodoListInteractorTests.swift in Sources */,
+				DCC0BCAB1FBCA59300E125F9 /* Seeds.swift in Sources */,
+				DC119BCF1FBCF99600A90C3D /* TodoListViewControllerTests.swift in Sources */,
+				DC119BCD1FBCF29100A90C3D /* TodoListPresenterTests.swift in Sources */,
+				DCC0BCAD1FBCAFD800E125F9 /* FirebaseServiceTest.swift in Sources */,
 				C939D3641FB5D91D00F18DE8 /* CleanReduxTodoListTests.swift in Sources */,
+				DCC0BCB01FBCDD0600E125F9 /* TodoWorkerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

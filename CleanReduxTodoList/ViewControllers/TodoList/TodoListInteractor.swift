@@ -26,7 +26,7 @@ class TodoListInteractor: ListTodosBusinessLogic, ListTodosDataSource, StoreSubs
     var todos: [Todo]!
     var selected_index: Int = 0
     
-    var view_model: TodoListViewModel?
+    var view_model: ListTodosPresentationLogic?
     var todo_list_worker = TodoListWorker(todoListServiceProtocol: FirebaseService())
     
     init() {
@@ -58,17 +58,23 @@ class TodoListInteractor: ListTodosBusinessLogic, ListTodosDataSource, StoreSubs
     
     func remove_todo(request: CreateTodo.Delete.Request) {
         let todo_to_remove = self.build_todo_from_fields(todo: request.todo_from_fields)
-        self.todo_list_worker.remove_todo(todo: todo_to_remove) { }
+        self.todo_list_worker.remove_todo(todo: todo_to_remove) {
+            self.present_fetch_todo_list()
+        }
     }
     
     //MARK: Redux StoreSubscriber callback
     func newState(state: TodoListState) {
         self.todos = state.todos
-        self.view_model?.present_fetch_todo_list(response: ListTodos.FetchTodos.Response(todos: self.todos))
+        self.present_fetch_todo_list()
     }
     
     //MARK: Utilities functions
     fileprivate func build_todo_from_fields(todo: CreateTodo.TodoFromFields) -> Todo{
         return Todo(key: todo.key, title: todo.title, done: todo.done, create_date: Date(), done_date: Date())
+    }
+    
+    fileprivate func present_fetch_todo_list(){
+        self.view_model?.present_fetch_todo_list(response: ListTodos.FetchTodos.Response(todos: self.todos))
     }
 }

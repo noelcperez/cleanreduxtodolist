@@ -10,15 +10,15 @@ import UIKit
 import CoreData
 
 public class CoreDataService: TodoListServiceProtocol {
-    func remove_todo(todo: Todo, completionHandler: () -> ()) {
+    func remove_todo(todo: Todo, completionHandler: @escaping () -> ()) {
         
     }
     
-    func update_todo(todo: Todo, completionHandlers: (String?) -> ()) {
+    func update_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> ()) {
         
     }
     
-    func add_todo(todo: Todo, completionHandlers: (Todo?, String?) -> Void) {
+    func add_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> Void) {
         
     }
     

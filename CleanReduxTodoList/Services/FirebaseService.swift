@@ -14,7 +14,13 @@ public class FirebaseService: TodoListServiceProtocol, TodoListListenerProtocol,
     fileprivate lazy var todosDatabaseReference = Database.database().reference().child("todos")
     
     //MARK: TodoListServiceProtocol implementation
-    func add_todo(todo: Todo, completionHandlers: (Todo?, String?) -> Void) {
+    func fetch_all_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void) {
+        self.todosDatabaseReference.observeSingleEvent(of: .value, with: { (dataSnapshot) in
+            completionHandler(self.process_todos(dataSnapshot: dataSnapshot), nil)
+        })
+    }
+    
+    func add_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> Void) {
         do {
             let dict = try self.encode(todo: todo)
             self.todosDatabaseReference.childByAutoId().setValue(dict)
@@ -25,26 +31,20 @@ public class FirebaseService: TodoListServiceProtocol, TodoListListenerProtocol,
         }
     }
     
-    func update_todo(todo: Todo, completionHandlers: (String?) -> ()) {
+    func update_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> ()) {
         do {
             let dict = try self.encode(todo: todo)
             self.todosDatabaseReference.child(todo.key).setValue(dict)
-            completionHandlers(nil)
+            completionHandlers(todo, nil)
         }
         catch let error {
-            completionHandlers(error.localizedDescription)
+            completionHandlers(nil, error.localizedDescription)
         }
     }
     
-    func remove_todo(todo: Todo, completionHandler: () -> ()) {
+    func remove_todo(todo: Todo, completionHandler: @escaping () -> ()) {
         self.todosDatabaseReference.child(todo.key).removeValue()
         completionHandler()
-    }
-    
-    func fetch_all_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void) {
-        self.todosDatabaseReference.observeSingleEvent(of: .value, with: { (dataSnapshot) in
-            completionHandler(self.process_todos(dataSnapshot: dataSnapshot), nil)
-        })
     }
     
     //MARK: TodoListListenerProtocol implementation

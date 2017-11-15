@@ -9,30 +9,30 @@
 import UIKit
 
 public class TodoListWorker {
-    fileprivate var todoListServiceProtocol: TodoListServiceProtocol & TodoListListenerProtocol & TodoListenerProtocol
+    var todoListServiceProtocol: TodoListServiceProtocol & TodoListListenerProtocol & TodoListenerProtocol
     
     init(todoListServiceProtocol: TodoListServiceProtocol & TodoListListenerProtocol & TodoListenerProtocol) {
         self.todoListServiceProtocol = todoListServiceProtocol
     }
     
+    //List
+    func fetch_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void) {
+        self.todoListServiceProtocol.fetch_all_todos(completionHandler: completionHandler)
+    }
+    
     //Create
-    func add_todo(todo: Todo, completionHandlers: (Todo?, String?) -> Void){
+    func add_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> Void){
         self.todoListServiceProtocol.add_todo(todo: todo, completionHandlers: completionHandlers)
     }
     
     //Update
-    func update_todo(todo: Todo, completionHandlers: (String?) -> ()){
+    func update_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> ()){
         self.todoListServiceProtocol.update_todo(todo: todo, completionHandlers: completionHandlers)
     }
     
     //Remove
-    func remove_todo(todo: Todo, completionHandler: () -> ()){
+    func remove_todo(todo: Todo, completionHandler: @escaping () -> ()){
         self.todoListServiceProtocol.remove_todo(todo: todo, completionHandler: completionHandler)
-    }
-    
-    //List
-    func fetch_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void) {
-        self.todoListServiceProtocol.fetch_all_todos(completionHandler: completionHandler)
     }
     
     //Listen to all todos
@@ -56,9 +56,9 @@ public class TodoListWorker {
 
 protocol TodoListServiceProtocol {
     func fetch_all_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void)
-    func add_todo(todo: Todo, completionHandlers: (Todo?, String?) -> Void)
-    func update_todo(todo: Todo, completionHandlers: (String?) -> ())
-    func remove_todo(todo: Todo, completionHandler: () -> ())
+    func add_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> Void)
+    func update_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> ())
+    func remove_todo(todo: Todo, completionHandler: @escaping () -> ())
 }
 
 

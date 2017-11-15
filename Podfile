@@ -16,6 +16,13 @@ target 'CleanReduxTodoList' do
 
   target 'CleanReduxTodoListTests' do
     inherit! :search_paths
+    
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Crash'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Storage'
+    pod 'Firebase/Analytics'
   end
 
   target 'CleanReduxTodoListUITests' do

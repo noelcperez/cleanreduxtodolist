@@ -31,7 +31,7 @@ class TodoDetailsInteractor: TodoDetailsBusinessProtocol, TodoDetailsDataSource 
     
     func update_todo(todo: CreateTodo.Update.Request) {
         let todo_to_update = self.build_todo_from_fields(todo: todo.todo_from_fields)
-        self.todo_worker.update_todo(todo: todo_to_update) { (error) in
+        self.todo_worker.update_todo(todo: todo_to_update) { (todo, error) in
             if let the_error = error{
                 //Show error
             }
