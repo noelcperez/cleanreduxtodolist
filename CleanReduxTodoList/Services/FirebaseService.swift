@@ -37,7 +37,8 @@ public class FirebaseService: TodoListServiceProtocol, TodoListListenerProtocol,
     }
     
     func remove_todo(todo: Todo, completionHandler: () -> ()) {
-        
+        self.todosDatabaseReference.child(todo.key).removeValue()
+        completionHandler()
     }
     
     func fetch_all_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void) {

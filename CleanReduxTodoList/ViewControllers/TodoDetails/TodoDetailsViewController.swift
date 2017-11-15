@@ -73,7 +73,7 @@ class TodoDetailsViewController: UIViewController, TodoDetailsDisplayProtocol{
 
     //MARK: - Actions
     @IBAction func doneButtonTouchUpInside(_ sender: UIButton) {
-        self.interactor?.update_todo(todo: CreateTodo.Update.Request(todo_from_fields: CreateTodo.TodoFromFields(title: self.todoTitle.text!, done: .done)))
+        self.interactor?.update_todo(todo: CreateTodo.Update.Request(todo_from_fields: CreateTodo.TodoFromFields(title: self.todoTitle.text!, done: .done, key: "")))
     }
     
     //MARK: - Todo Details Display protocol

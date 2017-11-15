@@ -11,6 +11,7 @@ import ReSwift
 
 protocol ListTodosBusinessLogic: Listener {
     func fetch_todos(request: ListTodos.FetchTodos.Request)
+    func remove_todo(request: CreateTodo.Delete.Request)
 }
 
 protocol ListTodosDataSource {
@@ -55,9 +56,19 @@ class TodoListInteractor: ListTodosBusinessLogic, ListTodosDataSource, StoreSubs
         }
     }
     
+    func remove_todo(request: CreateTodo.Delete.Request) {
+        let todo_to_remove = self.build_todo_from_fields(todo: request.todo_from_fields)
+        self.todo_list_worker.remove_todo(todo: todo_to_remove) { }
+    }
+    
     //MARK: Redux StoreSubscriber callback
     func newState(state: TodoListState) {
         self.todos = state.todos
         self.view_model?.present_fetch_todo_list(response: ListTodos.FetchTodos.Response(todos: self.todos))
+    }
+    
+    //MARK: Utilities functions
+    fileprivate func build_todo_from_fields(todo: CreateTodo.TodoFromFields) -> Todo{
+        return Todo(key: todo.key, title: todo.title, done: todo.done, create_date: Date(), done_date: Date())
     }
 }

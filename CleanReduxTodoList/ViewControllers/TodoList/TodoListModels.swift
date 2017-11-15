@@ -18,6 +18,7 @@ enum ListTodos {
         }
         struct TodosViewModel {
             struct DisplayedTodo {
+                var key: String
                 var title: String
                 var is_done: Bool
                 var create_date: String

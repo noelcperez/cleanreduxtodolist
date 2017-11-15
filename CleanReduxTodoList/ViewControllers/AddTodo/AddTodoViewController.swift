@@ -62,7 +62,7 @@ class AddTodoViewController: UIViewController, AddTodoDisplayProtocol {
     
     //MARK: - My Functions
     @objc fileprivate func add_todo(){
-        self.interactor?.add_todo(todo: CreateTodo.Create.Request(todo_from_fields: CreateTodo.TodoFromFields(title: self.titleTextField.text!, done: .todo)))
+        self.interactor?.add_todo(todo: CreateTodo.Create.Request(todo_from_fields: CreateTodo.TodoFromFields(title: self.titleTextField.text!, done: .todo, key: "")))
     }
 
     //MARK: - Display protocol

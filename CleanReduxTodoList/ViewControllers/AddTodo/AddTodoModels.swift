@@ -12,6 +12,7 @@ enum CreateTodo{
     struct TodoFromFields {
         var title: String
         var done: Todo.DoneStatus
+        var key: String
     }
     enum Create {
         struct Request {
@@ -33,6 +34,18 @@ enum CreateTodo{
             
         }
         struct ViewModel {
+            
+        }
+    }
+    
+    enum Delete{
+        struct Request {
+            var todo_from_fields: TodoFromFields
+        }
+        struct Response {
+            
+        }
+        struct DeleteViewModel {
             
         }
     }

@@ -111,5 +111,16 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         self.router?.data_store?.selected_index = indexPath.row
         self.router?.routeToShowTodoDetails()
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            let selected_displayed_todo = self.displayed_todos[indexPath.row]
+            let todo_to_delete = CreateTodo.TodoFromFields(title: selected_displayed_todo.title, done: .done, key: selected_displayed_todo.key)
+            self.interactor?.remove_todo(request: CreateTodo.Delete.Request(todo_from_fields: todo_to_delete))
+        default:
+            break
+        }
+    }
 }
 

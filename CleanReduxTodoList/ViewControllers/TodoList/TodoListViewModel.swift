@@ -32,7 +32,7 @@ class TodoListViewModel: ListTodosPresentationLogic {
             let created_date = self.date_formatter.string(from: todo.create_date)
             let done_date = self.date_formatter.string(from: todo.done_date)
             
-            displayed_todos.append(ListTodos.FetchTodos.TodosViewModel.DisplayedTodo(title: title, is_done: is_done, create_date: created_date, done_date: done_date))
+            displayed_todos.append(ListTodos.FetchTodos.TodosViewModel.DisplayedTodo(key: todo.key, title: title, is_done: is_done, create_date: created_date, done_date: done_date))
         }
         
         let view_model = ListTodos.FetchTodos.TodosViewModel(displayed_todos: displayed_todos)
