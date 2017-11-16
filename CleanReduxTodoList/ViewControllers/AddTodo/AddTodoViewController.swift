@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AddTodoDisplayProtocol {
+protocol AddTodoDisplayProtocol: DisplaysError {
     func todo_created(view_model: CreateTodo.Create.ViewModel)
 }
 

@@ -28,21 +28,35 @@ class TodoListInteractorTests: XCTestCase {
     class TodoListPresentationLogicSpy: ListTodosPresentationLogic{
         
         var presentFetchedTodoListCalled = false
+        var presentErrorTryingToFetchTodoListCalled = false
         
         func present_fetch_todo_list(response: ListTodos.FetchTodos.Response) {
             presentFetchedTodoListCalled = true
         }
+        
+        func present_error(error: String) {
+            presentErrorTryingToFetchTodoListCalled = true
+        }
+        
     }
     
     class TodoListWorkerSpy: TodoListWorker{
         
+        var withError = false
+        
         var fetchTodosCalled = false
+        var fetchTodosWithErrorCalled = false
         var deleteTodoCalled = false
         
         override func fetch_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void) {
-            fetchTodosCalled = true
-            
-            completionHandler([Seeds.Todos.todo1, Seeds.Todos.todo2], nil)
+            if withError{
+                fetchTodosWithErrorCalled = true
+                completionHandler([], TodoListError.somethingHappened(error: "Error"))
+            }
+            else{
+                fetchTodosCalled = true
+                completionHandler([Seeds.Todos.todo1, Seeds.Todos.todo2], nil)
+            }
         }
         
         override func remove_todo(todo: Todo, completionHandler: @escaping () -> ()) {
@@ -66,6 +80,23 @@ class TodoListInteractorTests: XCTestCase {
         //Then
         XCTAssertTrue(todoListWorker.fetchTodosCalled, "fetch_todos() should ask todoListWorker to fetch todos")
         XCTAssertTrue(todoListPresentationLogicSpy.presentFetchedTodoListCalled, "fetch_todos() should ask presenter to format fetched todos")
+    }
+    
+    func testFetchTodosWithErrorsShouldAskTodoListWorkerToFetchTodosAndPresenterToPresentError(){
+        //Given
+        let todoListPresentationLogicSpy = TodoListPresentationLogicSpy()
+        todoListInteractor.view_model = todoListPresentationLogicSpy
+        let todoListWorker = TodoListWorkerSpy(todoListServiceProtocol: FirebaseService())
+        todoListWorker.withError = true
+        todoListInteractor.todo_list_worker = todoListWorker
+        
+        //When
+        let request = ListTodos.FetchTodos.Request()
+        todoListInteractor.fetch_todos(request: request)
+        
+        //Then
+        XCTAssertTrue(todoListWorker.fetchTodosWithErrorCalled, "fetch_todos() should ask todoListWorker to try to fetch todos and return an error")
+        XCTAssertTrue(todoListPresentationLogicSpy.presentErrorTryingToFetchTodoListCalled, "fetch_todos() should ask presenter to present an error")
     }
     
     func testRemoveTodoShouldAskTodoListWorkerToDeleteTodoAndPresenterToFormatResults(){

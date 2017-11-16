@@ -16,19 +16,18 @@ protocol AddTodoDataSource {
     var todo: Todo? { get set }
 }
 
-class AddTodoInteractor: AddTodoBusinessProtocol, AddTodoDataSource {
+class AddTodoInteractor: BaseInteractor, AddTodoBusinessProtocol, AddTodoDataSource {
     
     var todo: Todo?
     
     var view_model: AddTodoPresentationLogic?
-    fileprivate let todo_worker = TodoListWorker(todoListServiceProtocol: FirebaseService())
     
     func add_todo(todo: CreateTodo.Create.Request) {
         let todo_to_create = self.build_todo_from_fields(todo: todo.todo_from_fields)
         
-        todo_worker.add_todo(todo: todo_to_create) { (todo, error) in
-            if let _ = error{
-                //Show error
+        self.todo_list_worker.add_todo(todo: todo_to_create) { (todo, error) in
+            if let the_error = error{
+                self.view_model?.present_error(error: the_error)
             }
             else if let the_todo = todo{
                 self.todo = the_todo

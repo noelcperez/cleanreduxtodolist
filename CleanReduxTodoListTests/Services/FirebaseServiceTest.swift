@@ -116,7 +116,7 @@ class FirebaseServiceTest: XCTestCase {
         
         //Then
         XCTAssertEqual(todoToAdd, addedTodo, "add_todo() should add a new todo to the list")
-        XCTAssertEqual(allTodos?.count, 3, "add_todo() should increase the todo list by one")
+        XCTAssertEqual(allTodos?.count, self.testTodos.count + 1, "add_todo() should increase the todo list by one")
         XCTAssertNil(addedTodoError, "add_todo() should not return an error")
     }
     

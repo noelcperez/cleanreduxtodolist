@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TodoDetailsPresentationLogic {
+protocol TodoDetailsPresentationLogic: PresentsError {
     func show_todo(response: TodoDetail.ShowTodo.Response)
     func todo_updated(response: CreateTodo.Update.Response)
 }
@@ -37,4 +37,9 @@ class TodoDetailsViewModel: TodoDetailsPresentationLogic {
     func todo_updated(response: CreateTodo.Update.Response) {
         self.view_controller?.todo_updated(view_model: CreateTodo.Update.ViewModel())
     }
+    
+    func present_error(error: String) {
+        self.view_controller?.display_error(error: error)
+    }
+    
 }

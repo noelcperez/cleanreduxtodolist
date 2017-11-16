@@ -22,6 +22,13 @@ class TodoListViewControllerTests: XCTestCase {
         todoListViewController = StoryboardScene.Main.todoListViewController.instantiate()
     }
     
+    override func tearDown() {
+        window = nil
+        todoListViewController = nil
+        
+        super.tearDown()
+    }
+    
     func loadView(){
         window.addSubview(todoListViewController.view)
         RunLoop.current.run(until: Date())

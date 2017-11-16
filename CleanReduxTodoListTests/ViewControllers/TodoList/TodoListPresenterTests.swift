@@ -27,12 +27,17 @@ class TodoListPresenterTests: XCTestCase {
     class TodoListDisplayLogicSpy: TodoListDisplayLogic{
         
         var displayTodoListCalled = false
+        var displayErrorWhenTryingToFetchTodoListCalled = false
         var view_model: ListTodos.FetchTodos.TodosViewModel!
         
         func display_fetched_todolist(view_model: ListTodos.FetchTodos.TodosViewModel) {
             displayTodoListCalled = true
             
             self.view_model = view_model
+        }
+        
+        func display_error(error: String) {
+            displayErrorWhenTryingToFetchTodoListCalled = true
         }
     }
     

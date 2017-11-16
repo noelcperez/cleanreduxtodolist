@@ -19,7 +19,7 @@ protocol ListTodosDataSource {
     var selected_index: Int { get set }
 }
 
-class TodoListInteractor: ListTodosBusinessLogic, ListTodosDataSource, StoreSubscriber {
+final class TodoListInteractor: BaseInteractor, ListTodosBusinessLogic, ListTodosDataSource, StoreSubscriber {
     
     typealias StoreSubscriberStateType = TodoListState
     
@@ -27,9 +27,10 @@ class TodoListInteractor: ListTodosBusinessLogic, ListTodosDataSource, StoreSubs
     var selected_index: Int = 0
     
     var view_model: ListTodosPresentationLogic?
-    var todo_list_worker = TodoListWorker(todoListServiceProtocol: FirebaseService())
     
-    init() {
+    override init() {
+        super.init()
+        
         GlobalStore.store.subscribe(self)
     }
     
@@ -47,8 +48,8 @@ class TodoListInteractor: ListTodosBusinessLogic, ListTodosDataSource, StoreSubs
     //MARK: ListTodosBusinessLogic protocol implementation
     func fetch_todos(request: ListTodos.FetchTodos.Request) {
         self.todo_list_worker.fetch_todos { (todos, error) in
-            if let _ = error{
-                //Show error
+            if let the_error = error?.localizedDescription{
+                self.view_model?.present_error(error: the_error)
             }
             else{
                 GlobalStore.store.dispatch(SetTodosAction(todos: todos))

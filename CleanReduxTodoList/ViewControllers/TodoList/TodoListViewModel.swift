@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ListTodosPresentationLogic {
+protocol ListTodosPresentationLogic: PresentsError {
     func present_fetch_todo_list(response: ListTodos.FetchTodos.Response)
 }
 
@@ -37,5 +37,9 @@ class TodoListViewModel: ListTodosPresentationLogic {
         
         let view_model = ListTodos.FetchTodos.TodosViewModel(displayed_todos: displayed_todos)
         view_controller?.display_fetched_todolist(view_model: view_model)
+    }
+    
+    func present_error(error: String) {
+        
     }
 }

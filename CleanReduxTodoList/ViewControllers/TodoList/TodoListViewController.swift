@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TodoListDisplayLogic: class {
+protocol TodoListDisplayLogic: DisplaysError { 
     func display_fetched_todolist(view_model: ListTodos.FetchTodos.TodosViewModel)
 }
 
