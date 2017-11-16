@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoTableViewCell" rowHeight="91" id="s0B-aK-Obu" customClass="TodoTableViewCell" customModule="CleanReduxTodoList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="91"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s0B-aK-Obu" id="YEd-Op-MyY">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doT-AS-jXS">
+                        <rect key="frame" x="15" y="35" width="310" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktz-eu-UtE">
+                        <rect key="frame" x="340" y="35" width="20" height="20"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="ocR-O2-4Pa"/>
+                            <constraint firstAttribute="width" secondItem="Ktz-eu-UtE" secondAttribute="height" multiplier="1:1" id="pMH-ZL-VYG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="doT-AS-jXS" secondAttribute="bottom" constant="12" id="33y-oM-mAL"/>
+                    <constraint firstItem="doT-AS-jXS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YEd-Op-MyY" secondAttribute="top" constant="12" id="M9B-8m-22T"/>
+                    <constraint firstAttribute="trailing" secondItem="Ktz-eu-UtE" secondAttribute="trailing" constant="15" id="TjO-Ro-AWW"/>
+                    <constraint firstItem="doT-AS-jXS" firstAttribute="leading" secondItem="YEd-Op-MyY" secondAttribute="leading" constant="15" id="VhO-QU-4vf"/>
+                    <constraint firstItem="Ktz-eu-UtE" firstAttribute="centerY" secondItem="YEd-Op-MyY" secondAttribute="centerY" id="ixS-Kh-Zz6"/>
+                    <constraint firstItem="doT-AS-jXS" firstAttribute="centerY" secondItem="YEd-Op-MyY" secondAttribute="centerY" id="jnf-Wf-ly0"/>
+                    <constraint firstItem="Ktz-eu-UtE" firstAttribute="leading" secondItem="doT-AS-jXS" secondAttribute="trailing" constant="15" id="uXy-w7-qdW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="doneStatusView" destination="Ktz-eu-UtE" id="7DP-KJ-RXj"/>
+                <outlet property="todoTitle" destination="doT-AS-jXS" id="0bO-EF-Etn"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="77.5"/>
+        </tableViewCell>
+    </objects>
+</document>
