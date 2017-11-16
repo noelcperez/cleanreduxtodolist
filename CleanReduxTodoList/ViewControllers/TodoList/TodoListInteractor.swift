@@ -47,7 +47,7 @@ final class TodoListInteractor: BaseInteractor, ListTodosBusinessLogic, ListTodo
     
     //MARK: ListTodosBusinessLogic protocol implementation
     func fetch_todos(request: ListTodos.FetchTodos.Request) {
-        self.todo_list_worker.fetch_todos { (todos, error) in
+        self.todo_list_worker.fetch_todos { [unowned self] (todos, error) in
             if let the_error = error?.localizedDescription{
                 self.view_model?.present_error(error: the_error)
             }
@@ -59,7 +59,7 @@ final class TodoListInteractor: BaseInteractor, ListTodosBusinessLogic, ListTodo
     
     func remove_todo(request: CreateTodo.Delete.Request) {
         let todo_to_remove = self.build_todo_from_fields(todo: request.todo_from_fields)
-        self.todo_list_worker.remove_todo(todo: todo_to_remove) {
+        self.todo_list_worker.remove_todo(todo: todo_to_remove) { [unowned self] in
             self.present_fetch_todo_list()
         }
     }

@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias TodoOrErrorCallback = (Todo?, String?) -> Void
+
 public class TodoListWorker {
     var todoListServiceProtocol: TodoListServiceProtocol & TodoListListenerProtocol & TodoListenerProtocol
     
@@ -21,12 +23,12 @@ public class TodoListWorker {
     }
     
     //Create
-    func add_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> Void){
+    func add_todo(todo: Todo, completionHandlers: @escaping TodoOrErrorCallback){
         self.todoListServiceProtocol.add_todo(todo: todo, completionHandlers: completionHandlers)
     }
     
     //Update
-    func update_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> ()){
+    func update_todo(todo: Todo, completionHandlers: @escaping TodoOrErrorCallback){
         self.todoListServiceProtocol.update_todo(todo: todo, completionHandlers: completionHandlers)
     }
     
@@ -55,9 +57,10 @@ public class TodoListWorker {
 }
 
 protocol TodoListServiceProtocol {
+    
     func fetch_all_todos(completionHandler: @escaping ([Todo], TodoListError?) -> Void)
-    func add_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> Void)
-    func update_todo(todo: Todo, completionHandlers: @escaping (Todo?, String?) -> ())
+    func add_todo(todo: Todo, completionHandlers: @escaping TodoOrErrorCallback)
+    func update_todo(todo: Todo, completionHandlers: @escaping TodoOrErrorCallback)
     func remove_todo(todo: Todo, completionHandler: @escaping () -> ())
 }
 

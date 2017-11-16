@@ -30,7 +30,7 @@ class TodoDetailsInteractor: BaseInteractor, TodoDetailsBusinessProtocol, TodoDe
     
     func update_todo(todo: CreateTodo.Update.Request) {
         let todo_to_update = self.build_todo_from_fields(todo: todo.todo_from_fields)
-        self.todo_list_worker.update_todo(todo: todo_to_update) { (todo, error) in
+        self.todo_list_worker.update_todo(todo: todo_to_update) { [unowned self] (todo, error) in
             if let the_error = error{
                 self.view_model?.present_error(error: the_error)
             }
@@ -42,7 +42,7 @@ class TodoDetailsInteractor: BaseInteractor, TodoDetailsBusinessProtocol, TodoDe
     
     //MARK: TodoDetailsDataSource implementation
     func listen() {
-        self.todo_list_worker.listen_to_todo(todo: self.todo) { (todo) in
+        self.todo_list_worker.listen_to_todo(todo: self.todo) { [unowned self] (todo) in
             self.todo = todo
             //GlobalStore.store.dispatch(UpdateTodo(todo: todo))
             self.view_model?.show_todo(response: TodoDetail.ShowTodo.Response(todo: self.todo))
