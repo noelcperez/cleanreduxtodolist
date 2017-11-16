@@ -44,7 +44,6 @@
 		DC9A57E91FB604B0004CCDF4 /* GlobalProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A57E81FB604B0004CCDF4 /* GlobalProtocols.swift */; };
 		DC9A57F01FB6161D004CCDF4 /* TodoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A57EF1FB6161D004CCDF4 /* TodoDetailsViewController.swift */; };
 		DC9A57F31FB61AC7004CCDF4 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A57F21FB61AC7004CCDF4 /* AddTodoViewController.swift */; };
-		DC9A57FA1FB61DE4004CCDF4 /* Jubilee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A57F81FB61DE4004CCDF4 /* Jubilee.swift */; };
 		DC9A57FD1FB61E15004CCDF4 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A57FC1FB61E15004CCDF4 /* TodoTableViewCell.swift */; };
 		DCC0BC9F1FBB4FDD00E125F9 /* TodoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC0BC9E1FBB4FDD00E125F9 /* TodoTableViewCell.xib */; };
 		DCC0BCA11FBB565200E125F9 /* TodoDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCA01FBB565200E125F9 /* TodoDetailsInteractor.swift */; };
@@ -122,7 +121,6 @@
 		DC9A57E81FB604B0004CCDF4 /* GlobalProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalProtocols.swift; sourceTree = "<group>"; };
 		DC9A57EF1FB6161D004CCDF4 /* TodoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsViewController.swift; sourceTree = "<group>"; };
 		DC9A57F21FB61AC7004CCDF4 /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
-		DC9A57F81FB61DE4004CCDF4 /* Jubilee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jubilee.swift; sourceTree = "<group>"; };
 		DC9A57FC1FB61E15004CCDF4 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		DCC0BC9E1FBB4FDD00E125F9 /* TodoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoTableViewCell.xib; sourceTree = "<group>"; };
 		DCC0BCA01FBB565200E125F9 /* TodoDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsInteractor.swift; sourceTree = "<group>"; };
@@ -398,17 +396,8 @@
 		DC9A57F61FB61DE4004CCDF4 /* 3rd Party */ = {
 			isa = PBXGroup;
 			children = (
-				DC9A57F71FB61DE4004CCDF4 /* Jubilee */,
 			);
 			path = "3rd Party";
-			sourceTree = "<group>";
-		};
-		DC9A57F71FB61DE4004CCDF4 /* Jubilee */ = {
-			isa = PBXGroup;
-			children = (
-				DC9A57F81FB61DE4004CCDF4 /* Jubilee.swift */,
-			);
-			path = Jubilee;
 			sourceTree = "<group>";
 		};
 		DC9A57F91FB61DE4004CCDF4 /* CustomViews */ = {
@@ -799,7 +788,6 @@
 				DCC0BCA31FBB566300E125F9 /* TodoDetailsViewModel.swift in Sources */,
 				DC01018F1FB65A9E009EC72F /* AddTodoRouter.swift in Sources */,
 				DC9A57F31FB61AC7004CCDF4 /* AddTodoViewController.swift in Sources */,
-				DC9A57FA1FB61DE4004CCDF4 /* Jubilee.swift in Sources */,
 				C939D3541FB5D91D00F18DE8 /* CleanReduxTodoList.xcdatamodeld in Sources */,
 				DC119BD11FBDE03800A90C3D /* BaseInteractor.swift in Sources */,
 				DC9A57E11FB5FA74004CCDF4 /* TodoListInteractor.swift in Sources */,
