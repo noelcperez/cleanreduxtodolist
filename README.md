@@ -36,6 +36,7 @@ Go to xCode Test navigator tab and click on the run button for CleanReduxTodoLis
 
 * [Firebase](firebase.google.com) - API management, Database
 * [Cocoapods](https://maven.apache.org/) - Dependency Management
+* [SwiftGen](https://github.com/SwiftGen/SwiftGen) - Code Generation Tool
 
 ## Authors
 
