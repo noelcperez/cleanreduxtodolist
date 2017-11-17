@@ -38,9 +38,9 @@ Go to xCode Test navigator tab and click on the run button for CleanReduxTodoLis
 * [Cocoapods](https://maven.apache.org/) - Dependency Management
 * [SwiftGen](https://github.com/SwiftGen/SwiftGen) - Code Generation Tool
 
-## Authors
+## Author
 
-* **Noel Perez** - (https://github.com/noelcarlosperez)
+**Noel Perez** - (https://github.com/noelcarlosperez)
 
 ## License
 
