@@ -40,7 +40,10 @@ Go to xCode Test navigator tab and click on the run button for CleanReduxTodoLis
 
 ## Author
 
-**Noel Perez** - (https://github.com/noelcarlosperez)
+**Noel Perez** 
+* GitHub (https://github.com/noelcarlosperez)
+* LinkedIn (https://www.linkedin.com/in/noelcarlosperezdieguez/)
+
 
 ## License
 
