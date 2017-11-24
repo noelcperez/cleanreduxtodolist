@@ -16,7 +16,7 @@ sensors) using what the Swift Community and I during years dealing with this iss
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Installing
 
@@ -37,6 +37,7 @@ Go to xCode Test navigator tab and click on the run button for CleanReduxTodoLis
 * [Firebase](firebase.google.com) - API management, Database
 * [Cocoapods](https://maven.apache.org/) - Dependency Management
 * [SwiftGen](https://github.com/SwiftGen/SwiftGen) - Code Generation Tool
+* [ReSwift] (https://github.com/ReSwift/ReSwift) - Redux swift implementation
 
 ## Author
 
