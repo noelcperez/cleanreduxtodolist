@@ -32,10 +32,10 @@ Go to xCode Test navigator tab and click on the run button for CleanReduxTodoLis
 
 ## Built With
 
-* [Firebase](firebase.google.com) - API management, Database
+* [Google Firebase](firebase.google.com) - API management, Database
 * [Cocoapods](https://maven.apache.org/) - Dependency Management
 * [SwiftGen](https://github.com/SwiftGen/SwiftGen) - Code Generation Tool
-* [ReSwift](https://github.com/ReSwift/ReSwift) - Redux swift implementation
+* [ReSwift](https://github.com/ReSwift/ReSwift) - Swift Redux implementation
 
 ## Author
 
