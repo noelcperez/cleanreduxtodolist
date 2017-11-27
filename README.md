@@ -1,8 +1,6 @@
 # Clean Redux Todo List
 
-Clean Redux Todo List is my aproach to create an architecture that could address some iOS architectural problems, like Massive View Controllers,
-Massive Storyboards with a lot of segues, dealing with data that may come from multiple sources(API calls, the user interaction with the App, 
-sensors) using what the Swift Community and I during years dealing with this issues have found that works.
+Clean Redux Todo List is a sample iOS App which purpose is to show a clean architecture that tackle somehow the issue that may appear when using pure MVC on iOS like Massive View Controllers, Massive Storyboards with a lot of segues or dealing with data that may come from multiple sources(API calls, the user interaction with the App, sensors).
 
 ## Version
 
